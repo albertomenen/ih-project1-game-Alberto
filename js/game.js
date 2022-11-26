@@ -1,6 +1,7 @@
 class Game{
-  constructor(context) {
-    this.ctx = context;
+  constructor(ctx) {
+    this.ctx = ctx;
+    this.person= new Person (500, 400, 70, 70)  
   }
 
   _assignControls() {
