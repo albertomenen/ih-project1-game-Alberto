@@ -8,6 +8,9 @@ class Droplet {
         this.image = undefined;
         this.fallInterval= undefined;
     }
+
+    // The drops coming down 
+
     _fallDown() {
         this.fallInterval = setInterval(() => {
             if(this.y > 600 + this.heigth) {
@@ -15,6 +18,8 @@ class Droplet {
             }
             this.y = this.y +1; 
         }, 10)
+
+    // The two different types of drops, how to assign it 
         
     _assignRole() {
         if(Math.floor(Math.random()*10) / 2 != 0) {
@@ -23,7 +28,8 @@ class Droplet {
             this.role = "hair";
         }
     }
-    
+   
+    //  How to assign an image depends of the role the drop has.
 
     _assignImage() {
       if( this.role === "razer") {
