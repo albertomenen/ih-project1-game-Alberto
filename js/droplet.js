@@ -2,27 +2,29 @@ class Droplet {
     constructor() {
         this.x = Math.floor( Math.random()* 950);
         this.y = Math.floor(Math.random()* -100);
-        this.width = 50;
-        this.heigth = 50;
-        this.role = undefined;
-        this.image = undefined;
-        this.fallInterval= undefined;
+        this.width = 100;
+        this.height = 100;
+        this.role = null;
+        this.image = razer;
+        this.fallInterval= null;
     }
 
     // The drops coming down 
 
     _fallDown() {
+        console.log("me han llakao")
         this.fallInterval = setInterval(() => {
-            if(this.y > 600 + this.heigth) {
-                clearInterval(this.fallInterval);
-            }
-            this.y = this.y +1; 
-        }, 10)
+            // if(this.y > 600 + this.heigth) {
+            //     clearInterval(this.fallInterval);
+            // }
+            this.y = this.y + 1; 
+        }, 50)
+    }
 
     // The two different types of drops, how to assign it 
         
     _assignRole() {
-        if(Math.floor(Math.random()*10) / 2 != 0) {
+        if(Math.floor(Math.random()*10) % 2 === 0) {
             this.role = "razer";
         } else {
             this.role = "hair";
@@ -38,5 +40,5 @@ class Droplet {
         this.image = hair
       }
     }
-    }
+    
 }

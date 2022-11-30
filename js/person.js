@@ -12,9 +12,9 @@ class Person {
     }
 
   moveRight() {
-    this.x = this.x +20;
+    this.x = this.x +30;
   }  
   moveLeft() {
-    this.x = this.x -20;
+    this.x = this.x -30;
   }
 }
