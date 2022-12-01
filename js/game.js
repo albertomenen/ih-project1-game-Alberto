@@ -1,7 +1,7 @@
 class Game{
   constructor(ctx) {
     this.ctx = ctx;
-    this.person= new Person (500, 400, 70, 70);
+    this.person= new Person (500, 500, 70, 70);
     //this.droplet = [new Droplet( 100, 100, 50, 50),new Droplet(100, 100, 50, 50)]
     this.droplet = [];
     this.points = 0;
@@ -49,6 +49,34 @@ class Game{
     });
   }
 
+  _checkCollisions() {
+    console.log("pum! Pelos conseguidos!", this.points  )
+    this.droplet.forEach((droplet) =>{
+      if (
+        (this.person.x >= droplet.x && this.person.x <= droplet.x +droplet.width ||
+        this.person.x + this.person.width >= droplet.x && this.person.x + this.person.width <= droplet.x + droplet.width |
+        droplet.x >= this.person.x && droplet.x <= this.person.x + this.person.width
+        ) &&
+        (
+          this.person.y <= droplet.y && this.person.y <= droplet.y + droplet.height ||
+          this.person.y + this.person.height >= droplet.y && this.person.y + this.person.height <= droplet.y + droplet.height |
+          droplet.y >= this.person.y && droplet.y <= this.person.y + this.person.height
+        )
+      ){ 
+
+        if (droplet.role === "hair") {
+          this.person._gettingHair();
+          this.points++
+        } else if (droplet.role === "razer") {
+          this.person._losingHair();
+          this.points--
+        }
+
+
+      }
+    })
+  }
+
   _clean() {
     this.ctx.clearRect(0, 0, 1000, 600);
   }º
@@ -57,6 +85,7 @@ class Game{
     this._clean();
     this._drawPerson();
     this._drawDroplets();
+    this._checkCollisions();
     window.requestAnimationFrame(() => this._update());
   }
 

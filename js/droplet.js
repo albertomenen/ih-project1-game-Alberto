@@ -12,11 +12,10 @@ class Droplet {
     // The drops coming down 
 
     _fallDown() {
-        console.log("me han llakao")
         this.fallInterval = setInterval(() => {
-            // if(this.y > 600 + this.heigth) {
-            //     clearInterval(this.fallInterval);
-            // }
+            if(this.y > 600 + this.heigth) {
+                clearInterval(this.fallInterval);
+            }
             this.y = this.y + 1; 
         }, 50)
     }

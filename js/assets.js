@@ -3,7 +3,7 @@
 // The bold guy
 
 const person = new Image();
-person.src = "./images/bold.png";
+person.src = "./images/bold-1.png";
 
 // The hair 
 
