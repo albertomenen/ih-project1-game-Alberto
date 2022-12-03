@@ -22,6 +22,10 @@ class Game{
     
   }
 
+  noTimeForBold() {
+    setTimeout 
+  }
+
   _drawPerson() {
     this.ctx.drawImage(this.person.image, this.person.x, this.person.y, this.person.width, this.person.height)
   }
@@ -36,8 +40,8 @@ class Game{
   }
 
   _showScore() {
-    this.ctx.fillStyle = "black";
-    this.ctx.font = "20px Sans";
+    this.ctx.fillStyle = "red";
+    this.ctx.font = "40px Sans";
     this.ctx.fillText(`Pelos: ${this.points} `, 850, 590)
   }
 

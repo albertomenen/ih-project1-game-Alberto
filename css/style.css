@@ -3,20 +3,29 @@
   padding: 0;
 }
 
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+p {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
 
 /* Start Page  */
 
 #start-page {
   height: 500px;
-  width: 1000px;
+  width: 850px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
-  margin: 0 auto;
   border: 1px solid black;
   margin-top: 30px;
+  margin-left: 90px;
   background-image: url("/images/istambul-anime.png");
   position: fixed;
 }
@@ -29,7 +38,14 @@ canvas {
   margin-top: 30px;
   width: 850px;
   margin-bottom: 50px;
-  background-image:url("/images/istambul-anime.png");
+  background-image:url("/images/surgery-room.png");
+}
+
+#start {
+  font-size: 34px;
+  background-color: #749F82;
+  border: 2px solid;
+  margin-top: 100px;
 }
 
 /* Auxiliar classes */
@@ -52,6 +68,8 @@ canvas {
   color: red;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -67,5 +85,7 @@ canvas {
   color: red;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   
 }
