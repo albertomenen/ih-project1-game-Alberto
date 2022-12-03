@@ -17,7 +17,7 @@ class Droplet {
                 clearInterval(this.fallInterval);
             }
             this.y = this.y + 1; 
-        }, 50)
+        }, 20)
     }
 
     // The two different types of drops, how to assign it 

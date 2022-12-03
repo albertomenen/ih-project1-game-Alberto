@@ -18,3 +18,7 @@ class Person {
     this.x = this.x -30;
   }
 }
+
+
+
+  

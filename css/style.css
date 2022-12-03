@@ -3,11 +3,11 @@
   padding: 0;
 }
 
-/* Basic styles, change according to your style */
 
-#start-page,
-#lose-page {
-  height: 600px;
+/* Start Page  */
+
+#start-page {
+  height: 500px;
   width: 1000px;
   display: flex;
   justify-content: center;
@@ -17,19 +17,19 @@
   margin: 0 auto;
   border: 1px solid black;
   margin-top: 30px;
+  background-image: url("/images/istambul-anime.png");
+  position: fixed;
 }
 
-#lose-page {
-  display: none;
-}
 
 canvas {
   border: 1px solid black;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  width: 850px;
   margin-bottom: 50px;
-  background-image:"/images/istambul.png";
+  background-image:url("/images/istambul-anime.png");
 }
 
 /* Auxiliar classes */
@@ -40,4 +40,32 @@ canvas {
 
 .shown {
   display: flex;
+}
+
+/* win page */
+
+#win-page {
+  display: none;
+  background-image: url("/images/hair-mode.png");
+  width: 500px;
+  height: 500px;
+  color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Loose page */
+
+#lost-page {
+  display: none;
+  background-image: url("/images/lose-image.png");
+  width: 500px;
+  height: 500px;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  
 }
