@@ -13,6 +13,8 @@ Minimum user stories:
 
 - User can go to the left 
 - User can go to the right
+-Yo can go to the top.
+- Yo can go down
 
 ## User stories Backlog
 
